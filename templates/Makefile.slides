@@ -1,0 +1,14 @@
+.PHONY: all
+all: XXX-notes.pdf XXX-slides.pdf
+
+SRC=		XXX-preamble.tex XXX.bib
+SRC+=		abstract.tex XXX-content.tex
+
+XXX-notes.pdf: llncs biblatex-lncs
+XXX-notes.pdf: XXX-notes.tex ${SRC}
+
+XXX-slides.pdf: XXX-slides.tex ${SRC}
+
+
+INCLUDE_MAKEFILES=../makefiles
+include ${INCLUDE_MAKEFILES}/tex.mk

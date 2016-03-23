@@ -1,0 +1,30 @@
+.PHONY: all
+all: studyguide.pdf
+
+SRC=		studyguide.tex
+SRC+=		${MODULE_FILES}
+
+MODULE_FILES+= 	XXX-aim.tex XXX-lit.tex XXX.bib
+
+XXX-aim.tex: ../modules/XXX/aims.tex
+XXX-lit.tex: ../modules/XXX/abstract.tex
+XXX.bib: ../modules/XXX/XXX.bib
+
+
+${MODULE_FILES}:
+	ln -s $^ $@
+
+
+studyguide.pdf: ${SRC}
+studyguide.pdf: llncs biblatex-lncs
+
+
+.PHONY: clean-depends
+clean-depends:
+	${RM} ${MODULE_FILES}
+
+
+### INCLUDES ###
+
+INCLUDE_MAKEFILES=../makefiles
+include ${INCLUDE_MAKEFILES}/tex.mk
