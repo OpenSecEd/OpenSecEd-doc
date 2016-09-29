@@ -1,4 +1,4 @@
-Documentation of the Open Security Education project
+Documentation of the Open Security Education Project
 ===============================================================================
 
 - Goals
