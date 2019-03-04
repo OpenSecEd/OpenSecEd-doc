@@ -1,4 +1,6 @@
 \documentclass{article}
+%\documentclass[twocolumn]{article}
+%\usepackage{balance}
 
 \usepackage[hyphens]{url}
 \usepackage[hidelinks]{hyperref}
@@ -27,8 +29,12 @@
 
 \begin{document}
 \maketitle
+\thispagestyle{empty}
 \begin{abstract}
   \input{abstract.tex}
 \end{abstract}
+\clearpage
+\tableofcontents
+\clearpage
 \input{content.tex}
 \end{document}
