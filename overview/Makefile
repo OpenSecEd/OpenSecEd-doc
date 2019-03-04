@@ -22,3 +22,7 @@ clean:
 
 INCLUDE_MAKEFILES=../makefiles
 include ${INCLUDE_MAKEFILES}/tex.mk
+INCLUDE_BIBSP=../bibsp
+include ${INCLUDE_BIBSP}/bibsp.mk
+INCLUDE_BIBEDU=../bibedu
+include ${INCLUDE_BIBEDU}/bibedu.mk
